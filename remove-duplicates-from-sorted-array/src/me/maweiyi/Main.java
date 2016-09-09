@@ -10,9 +10,9 @@ public class Main {
                 count++;
                 if (count >= 1) {
                     continue;
-                } else {
-                    count = 1;
                 }
+            } else {
+                count = 1;
             }
             A[index++] = A[i];
         }
