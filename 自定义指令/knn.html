@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body id="example">
+<div v-my-directive="some">{{some}}</div>
+</body>
+
+<script>
+    Vue.directive('my-directive', {
+        bind: function () {
+            console.log("XX-XX-XX");
+        },
+        update: function (newValue, oldValue) {
+            alert(newValue);
+            alert(oldValue);
+
+        },
+        unbind: function () {
+            console.log("UN-UN-UN");
+        }
+    });
+    var demo = new Vue({
+        el: '#example',
+        data: {
+            some: "Maweiyi"
+        },
+        methods: {
+
+        }
+
+    });
+
+
+</script>
+
+
+</html>
