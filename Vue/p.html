@@ -6,21 +6,36 @@
     <script src="vue.js"></script>
 </head>
 <body>
-<template id="example" v-if="greeting">
-    <p>Hello World!</p>
-    <p>Hello World!</p>
-</template>
 
-<script>
-    var exampleVM2 = new Vue({
-        el: "#example",
-        data: {
-            greeting: true
-        }
-    });
-</script>
-
-
+<div id="demo">
+    <div class="btn-group pull-right" v-if="ok">
+        <button class="btn btn-white btn-sm" @click="preRecMessagePages"><i class="fa fa-arrow-left">KKKKKKKS</i>
+        </button>
+        <button class="btn btn-white btn-sm" @click="nextRecMessagePages"><i class="fa fa-arrow-right">KKKKKKKKp</i>
+        </button>
+    </div>
+    <div class="btn-group pull-right" v-else>
+        <button class="btn btn-white btn-sm" @click="preSentMessagePages">KKKKKKKKKJ<i class="fa fa-arrow-left"></i>
+        </button>
+        <button class="btn btn-white btn-sm" @click="nextSentMessagePages">KKKKKKKKN<i class="fa fa-arrow-right"></i>
+        </button>
+    </div>
+    <button @click="clicks">Click Me</button>
+</div>
 </body>
+<script>
+    var demo = new Vue({
+        el: '#demo',
+
+        data: {
+            ok: false
+        },
+        methods: {
+            clicks: function () {
+                this.ok = !this.ok
+            }
+        }
+    })
+</script>
 
 </html>
