@@ -41,7 +41,7 @@ public class Main {
                 a[i] = a[k];
                 a[k] = tmp;
             }
-            
+
         }
 
         for (int i = 0; i < a.length; i++) {
