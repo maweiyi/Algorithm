@@ -13,15 +13,17 @@ public class Main {
         Integer[] a = {6, 5, 3, 1, 8, 7, 2, 4};
         for (int i = 1; i < a.length; i++) {
             Integer flag = a[i];
+            Integer positon = i;
             for (int j = i-1; j >= 0; j--) {
                 if (flag < a[j]) {
                     a[j + 1] = a[j];
                     a[j] = flag;
+                    positon -= 1;
                 }
 
-
-
                 }
+
+                a[positon] = flag;
 
 
             }
