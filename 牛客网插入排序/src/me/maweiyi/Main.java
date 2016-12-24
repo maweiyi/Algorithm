@@ -1,7 +1,5 @@
 package me.maweiyi;
 
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
 public class Main {
 
     //插入排序
