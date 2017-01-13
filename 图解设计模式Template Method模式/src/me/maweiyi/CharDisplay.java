@@ -4,6 +4,7 @@ package me.maweiyi;
  * Created by MWY
  * Date: 1/12/17
  * Time: 16:17
+ * 
  */
 public class CharDisplay extends AbstractDisplay {
     private char ch;
